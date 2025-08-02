@@ -14,6 +14,7 @@ public class Main {
     public static void main(String[] args) {
         int option;
         GeometricForm geometricForm = null;
+
         while (true) {
             System.out.println("Escolha a forma geométrica para calcular a área: ");
             System.out.println("1 - Quadrado");
@@ -27,7 +28,7 @@ public class Main {
                 if (option == 1) {
                     geometricForm = createSquare();
                 } else if (option == 2) {
-                    geometricForm = crateRectangle();
+                    geometricForm = createRectangle();
                 } else if (option == 3) {
                     geometricForm = createCircle();
                 } else if (option == 4) {
@@ -51,7 +52,7 @@ public class Main {
         return new Square(side);
     }
 
-    private static GeometricForm crateRectangle() {
+    private static GeometricForm createRectangle() {
         System.out.println("Informe a altura: ");
         var height = scanner.nextDouble();
         System.out.println("Informe a base: ");
